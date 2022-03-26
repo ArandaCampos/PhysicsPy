@@ -7,9 +7,6 @@ WIDTH, HEIGHT = 1200, 600
 WIN = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("MUV e MRU com projétil")
 
-#base_font = pygame.font.Font(None, 32)
-#user_text = ''
-
 WHITE = (210, 210, 210)
 BLACK = (0, 0, 0, .8)
 
@@ -82,35 +79,4 @@ def main():
 
 	pygame.quit()
 
-'''
-def menu():
-	clock = pygame.time.Clock()
-	clock.tick(20)
-	run = True
-
-	while run:
-		WIN.fill(WHITE)
-
-		input_box = pygame.Rect(100, 100, 0, 0)
-
-		for event in pygame.event.get():
-			if event.type == pygame.QUIT:
-				run = False
-
-			if event.type == pygame.KEYDOWN:
-				if event.key == pygame.K_BACKSPACE:
-					user_text = user_text[:-1]
-				else:
-					user_text += event.unicode
-
-			pygame.display.update()
-		t = user_text
-		text_surface = base_font.render('Ola', True, (255, 255, 255))
-		print(f'{t}')
-		WIN.blit(text_surface, (5, 5))
-
-	pygame.quit()
-
-#menu()
-'''
 main()
