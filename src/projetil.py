@@ -1,3 +1,4 @@
+from wsgiref.simple_server import WSGIRequestHandler
 import pygame
 import math
 pygame.init()
@@ -6,7 +7,6 @@ altura = float(input('Qual a altura o objeto será lançado? (metros) '))
 velocidade = float(input('Qual a velocidade inicial (m/s): '))
 angulo = float(input('Qual o angulo, em graus, que o objeto será lançado? '))
 raio = float(input('O objeto tem raio de (em metros): '))
-
 
 WIDTH, HEIGHT = 1200, 600
 WIN = pygame.display.set_mode((WIDTH, HEIGHT))
@@ -59,7 +59,7 @@ class Objeto:
 	def update_position(self, t):
 		x, y = self.deslocamento(t)
 		if y >= 0:
-			print(f'{x} | {y}')
+			print("%.2f | %.2f" %(x, y))
 			self.orbita.append((x * self.ESCALA , HEIGHT - y * self.ESCALA - self.raio))
 
 def main(altura, velocidade, angulo, raio):
