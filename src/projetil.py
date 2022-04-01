@@ -3,14 +3,13 @@ import pygame
 import math
 pygame.init()
 
-altura = float(input('Qual a altura o objeto será lançado? (metros) '))
+altura = float(input('Qual a altura o objeto a ser lançado? (metros) '))
 velocidade = float(input('Qual a velocidade inicial (m/s): '))
-angulo = float(input('Qual o angulo, em graus, que o objeto será lançado? '))
-raio = float(input('O objeto tem raio de (em metros): '))
+angulo = float(input('Qual o angulo que o objeto será lançado? (graus) '))
 
 WIDTH, HEIGHT = 1200, 600
 WIN = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("MUV e MRU com projétil")
+pygame.display.set_caption("Projétil")
 
 WHITE = (210, 210, 210)
 BLACK = (0, 0, 0, .8)
@@ -21,13 +20,13 @@ class Objeto:
 	g = -9.807 		       	# Aceleração da gravidade (m/s^2)
 	ESCALA = 10				# 10px == 1 metro
 
-	def __init__(self, x, y, velocidade, angulo, raio):
+	def __init__(self, x, y, velocidade, angulo):
 		self.x = x													# Posição Vertical (m)
 		self.y = y													# Posição Horizontal (m)
 		self.vy = velocidade * math.sin(math.radians(angulo))		# Velocidade Inicial eixo y
 		self.vx = velocidade * math.cos(math.radians(angulo))		# Velocidade Inicial eixo x
 		self.angulo = angulo
-		self.raio = raio 			# Raio (m)
+		self.raio = 20 			# Raio (m)
 		self.orbita = []
 
 	def draw(self, win):
@@ -62,11 +61,11 @@ class Objeto:
 			print("%.2f | %.2f" %(x, y))
 			self.orbita.append((x * self.ESCALA , HEIGHT - y * self.ESCALA - self.raio))
 
-def main(altura, velocidade, angulo, raio):
+def main(altura, velocidade, angulo):
 	run = True
 	clock = pygame.time.Clock()
 	t = 0
-	objeto = Objeto(0, altura, velocidade, angulo, raio * 10)
+	objeto = Objeto(0, altura, velocidade, angulo)
 
 	while run:
 		clock.tick(20)
@@ -84,4 +83,4 @@ def main(altura, velocidade, angulo, raio):
 
 	pygame.quit()
 
-main(altura, velocidade, angulo, raio)
+main(altura, velocidade, angulo)
