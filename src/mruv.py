@@ -10,7 +10,7 @@ aceleracao = float(input('Qual a aceleracao, em m/s, do objeto? '))
 
 WIDTH, HEIGHT = 1200, 600
 WIN = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("MUV e MRU com projétil")
+pygame.display.set_caption("Movimento Retilíneo Uniformemente Variado")
 
 WHITE = (210, 210, 210)
 BLACK = (0, 0, 0, .8)
