@@ -26,7 +26,7 @@ class Objeto:
 		self.vy = velocidade * math.sin(math.radians(angulo))		# Velocidade Inicial eixo y
 		self.vx = velocidade * math.cos(math.radians(angulo))		# Velocidade Inicial eixo x
 		self.angulo = angulo
-		self.raio = 20 			# Raio (m)
+		self.diametro = 20 			# Raio (m)
 		self.orbita = []
 
 	def draw(self, win):
@@ -40,7 +40,7 @@ class Objeto:
 		if len(self.orbita) > 2:
 			pygame.draw.lines(win, BLACK, False, updated_points, 2)
 
-		pygame.draw.circle(win, BLACK, (x, y), self.raio)
+		pygame.draw.circle(win, BLACK, (x, y), self.diametro)
 
 	def velocidade(self, t):
 		vx, vy, g = self.vx, self.vy, self.g
@@ -59,7 +59,7 @@ class Objeto:
 		x, y = self.deslocamento(t)
 		if y >= 0:
 			print("%.2f | %.2f" %(x, y))
-			self.orbita.append((x * self.ESCALA , HEIGHT - y * self.ESCALA - self.raio))
+			self.orbita.append((x * self.ESCALA , HEIGHT - y * self.ESCALA - self.diametro))
 
 def main(altura, velocidade, angulo):
 	run = True
