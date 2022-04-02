@@ -27,7 +27,7 @@ class Objeto:
 		self.pf = pf
 		self.v = velocidade
 		self.a = aceleracao
-		self.raio = 20
+		self.diametro = 20
 		self.movimento = []
 
 	def draw(self, win):
@@ -41,7 +41,7 @@ class Objeto:
 		if len(self.movimento) > 2:
 			pygame.draw.lines(win, BLACK, False, updated_points, 2)
 
-		pygame.draw.circle(win, BLACK, (x, y), self.raio)
+		pygame.draw.circle(win, BLACK, (x, y), self.diametro)
 
 	def velocidade(self, t):
 		a, v = self.a, self.v
@@ -59,7 +59,7 @@ class Objeto:
 		y, pf = self.y, self.pf
 		if x <= pf:
 			print("%.2f | %.2f | %.2f" %(x, t, v))
-			self.movimento.append((x * self.ESCALA , HEIGHT - y * self.ESCALA - self.raio))
+			self.movimento.append((x * self.ESCALA , HEIGHT - y * self.ESCALA - self.diametro))
 
 def main(x, velocidade, aceleracao, p0):
 	run = True
