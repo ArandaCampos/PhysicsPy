@@ -1,6 +1,6 @@
 ## Movimento Retilíneo Uniformemente Variado (MRUV)
 
-&emsp;Os movimentos retilíneos uniformemente variados (MRUV) se caracterizam por um deslocamento linear e aceleração constante. Ou seja, não há mudança de direção e sentido (frente e trás; esquerda e direita) e a velocidade sofre alterações constantes.
+&emsp;Os movimentos retilíneos uniformemente variados (MRUV) se caracterizam por um deslocamento linear e aceleração constante. Ou seja, não há mudança de direção e sentido (frente e trás; esquerda e direita) e a velocidade sofre alterações constantes, podem ser desacelerado ou acelerado.
 
 ## Fórmulas importantes do MHS
 
