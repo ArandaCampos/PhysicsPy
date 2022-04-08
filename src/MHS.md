@@ -4,7 +4,7 @@
 
 ## Fórmulas importantes do MHS
 
-| Comando | Descrição |
+| Fórmula | Descrição |
 | --- | --- |
 | w² = g / l | g, aceleração da gravidade; l, comprimento do pêndulo |
 | x(t) = wAcos(wt + o) | w, frequência angular; A, amplitude; e o, fase inicial. |
