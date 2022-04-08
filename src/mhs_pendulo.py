@@ -63,7 +63,6 @@ class Objeto:
 
 	def update_position(self, t):
 		self.x, self.y = self.deslocamento(t)
-		print(f"{self.x} | {self.y} | {t}")
 		x, y = self.transformacaoLinear(self.x * self.ESCALA, self.y * self.ESCALA)
 		self.movimento.append((x, y))
 
