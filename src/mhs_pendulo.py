@@ -6,7 +6,7 @@ theta = -1
 while not ((theta >= 0) and (theta <= 10)):
     theta = float(input('Qual o angulo inicial em graus? (menor que 10) '))
 m = float(input('Qual a massa do objeto? '))        # Por mero parâmetro experimental
-L = float(input('Qual o comprimento da linha? (em cm) '))
+L = float(input('Qual o comprimento da linha? (em m) '))
 
 WIDTH, HEIGHT = 1200, 600
 WIN = pygame.display.set_mode((WIDTH, HEIGHT))
@@ -18,8 +18,9 @@ BLACK = (0, 0, 0, .8)
 #FONT = pygame.font.SysFont("comicsans", 16)
 
 class Objeto:
-	g = 9.807 		       	        # Aceleração da gravidade (m/s^2)
-	ESCALA = HEIGHT / L * 0.9 		        # L == Altura da tela
+	g = 9.807 		       	                # Aceleração da gravidade (m/s^2)
+	ESCALAH = HEIGHT / L * 0.7 		        # L == Altura da tela
+	ESCALAW = WIDTH / L * 0.7 		        # L == Altura da tela
 
 	def __init__(self, angulo, m, L):
 		self.angulo = theta
@@ -52,7 +53,7 @@ class Objeto:
 
 	def frequencia_angular(self):
 		L, g = self.L, self.g
-		w = math.sqrt(L / g)
+		w = math.sqrt(g / L)
 		return w
 
 	def deslocamento(self, t):
@@ -64,7 +65,7 @@ class Objeto:
 	def update_position(self, t):
 		self.x, self.y = self.deslocamento(t)
 		print(f"{self.x} | {self.y} | {t}")
-		x, y = self.transformacaoLinear(self.x * self.ESCALA, self.y * self.ESCALA)
+		x, y = self.transformacaoLinear(self.x * self.ESCALAW, self.y * self.ESCALAH)
 		self.movimento.append((x, y))
 
 def main(theta, m, L):
@@ -76,7 +77,6 @@ def main(theta, m, L):
 	while run:
 		clock.tick(20)
 		WIN.fill(WHITE)
-		t += 1/20
 
 		for event in pygame.event.get():
 			if event.type == pygame.QUIT:
@@ -87,6 +87,7 @@ def main(theta, m, L):
 
 		pygame.display.update()
 
+		t += 1/20
 	pygame.quit()
 
 main(theta, m, L)
