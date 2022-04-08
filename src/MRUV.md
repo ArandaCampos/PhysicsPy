@@ -4,7 +4,7 @@
 
 ## Fórmulas importantes do MRUV
 
-| Comando | Descrição |
+| Fórmula | Descrição |
 | --- | --- |
 | x(t) = x0 + v*t + at²/2 | x0, posição inicial; v, velocidade; e a, aceleração. |
 
