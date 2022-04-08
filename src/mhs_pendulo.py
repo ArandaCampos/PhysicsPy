@@ -19,8 +19,7 @@ BLACK = (0, 0, 0, .8)
 
 class Objeto:
 	g = 9.807 		       	                # Aceleração da gravidade (m/s^2)
-	ESCALAH = HEIGHT / L * 0.7 		        # L == Altura da tela
-	ESCALAW = WIDTH / L * 0.7 		        # L == Altura da tela
+	ESCALA = HEIGHT / L * 0.8	        # L == Altura da tela
 
 	def __init__(self, angulo, m, L):
 		self.angulo = theta
@@ -65,7 +64,7 @@ class Objeto:
 	def update_position(self, t):
 		self.x, self.y = self.deslocamento(t)
 		print(f"{self.x} | {self.y} | {t}")
-		x, y = self.transformacaoLinear(self.x * self.ESCALAW, self.y * self.ESCALAH)
+		x, y = self.transformacaoLinear(self.x * self.ESCALA, self.y * self.ESCALA)
 		self.movimento.append((x, y))
 
 def main(theta, m, L):
