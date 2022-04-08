@@ -10,7 +10,7 @@ L = float(input('Qual o comprimento da linha? (em m) '))
 
 WIDTH, HEIGHT = 1200, 600
 WIN = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("Movimento Retilíneo Uniformemente Variado")
+pygame.display.set_caption("Movimento Harmônico Simples")
 
 WHITE = (210, 210, 210)
 BLACK = (0, 0, 0, .8)
