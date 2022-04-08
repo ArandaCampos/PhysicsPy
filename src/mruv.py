@@ -15,11 +15,12 @@ pygame.display.set_caption("Movimento Retilíneo Uniformemente Variado")
 WHITE = (210, 210, 210)
 BLACK = (0, 0, 0, .8)
 
-FONT = pygame.font.SysFont("comicsans", 16)
+#FONT = pygame.font.SysFont("comicsans", 16)
 
 class Objeto:
 	g = -9.807 		       	# Aceleração da gravidade (m/s^2)
-	ESCALA = 10				# 10px == 1 metro
+	P0 = x
+	ESCALA = (WIDTH - 50) / (pf - x)				# 10px == 1 metro
 
 	def __init__(self, x, velocidade, aceleracao, pf):
 		self.x = x													# Posição Vertical (m)
@@ -43,6 +44,10 @@ class Objeto:
 
 		pygame.draw.circle(win, BLACK, (x, y), self.diametro)
 
+	def transformacaoLinear(self, x):
+		x -= self.P0
+		return x
+
 	def velocidade(self, t):
 		a, v = self.a, self.v
 		V = v * t + (math.pow(t, 2) * a) / 2
@@ -59,7 +64,8 @@ class Objeto:
 		y, pf = self.y, self.pf
 		if x <= pf:
 			print("%.2f | %.2f | %.2f" %(x, t, v))
-			self.movimento.append((x * self.ESCALA , HEIGHT - y * self.ESCALA - self.diametro))
+			x = self.transformacaoLinear(x)
+			self.movimento.append((x * self.ESCALA + 25 , HEIGHT - y * self.ESCALA - self.diametro))
 
 def main(x, velocidade, aceleracao, p0):
 	run = True
