@@ -1,6 +1,6 @@
 ## Movimento Harmônico Simples (MHS)
 
-&emsp;Os movimentos harmônicos (MH) são característicos dos movimentos repetitivos com periódicidade, como pêndulos e molas. O movimento harmônico simples `(MHS)`, por sua vez, se distingue dos demais por utilizar-se da equivalência entre senos e tangentes de angulos baixos para simplificar os cálculo. Essa simplificação justifica o valor máximo da amplitude inicial.
+&emsp;Os movimentos harmônicos (MH) são característicos dos movimentos repetitivos com periodicidade, como pêndulos e molas. O movimento harmônico simples `(MHS)`, por sua vez, se distingue dos demais por utilizar-se da equivalência entre senos e tangentes de angulos baixos para simplificar os cálculo. Essa simplificação justifica o valor máximo da amplitude inicial.
 
 ## Fórmulas importantes do MHS
 
