@@ -15,7 +15,7 @@ BLACK = (0, 0, 0, 0.8)
 FONT = pygame.font.SysFont("comicsans", 16)
 
 class Objeto:
-    ESCALA = 10
+    ESCALA = (WIDTH - 50) / (pf - x)				# 10px == 1 metro
     def __init__ (self, x, pf, v):
         self.x = x
         self.pf = pf
