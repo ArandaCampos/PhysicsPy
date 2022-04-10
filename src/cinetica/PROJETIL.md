@@ -1,13 +1,13 @@
 ## Projéteis
 
-&emsp;Esta é uma cinética mais aplicada. Nela, estuda-se o movimento dos corpos lançados a um determinado angulo, altura e velocidade inicial e sem aceleração. Por isso, o movimento sofre apenas com a gravidade. Seu deslocamento pode ser analisado em duas parte: MU (horizontal) e MUV (vertical)
+&emsp;Este é um conceito mais específico. Nele, estuda-se o movimento dos corpos lançados a um determinado angulo, altura e velocidade inicial. Por não haver aceleração, a trajetória sofre apenas com a influência da gravidade. O deslocamento pode ser melhor esclarecido se analisado em duas parte: MU (na horizontal) e MUV (na vertical).
 
 ## Fórmulas importantes de Projéteis
 
 | Fórmula | Descrição |
 | --- | --- |
-| P(y) = P0(y) + sen(theta)vt + gt²/2 | P0(y), posição inicial no eixo y; theta, angulo de lançamento; v, velocidade; g, gravidade; t, tempo |
-| P(x) = P0(x) + cos(theta)vt | P0(x), posição inicial no eixo x; theta, angulo de lançamento; v, velocidade; t, tempo |
+| Py(t) = P0(y) + sen(theta)vt + gt²/2 | P0(y), posição inicial no eixo y; theta, angulo de lançamento; v, velocidade; g, gravidade; t, tempo |
+| Px(t) = P0(x) + cos(theta)vt | P0(x), posição inicial no eixo x; theta, angulo de lançamento; v, velocidade; t, tempo |
 
 ## Modo de usar
 
