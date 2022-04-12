@@ -15,7 +15,7 @@ RAIO_DA_TERRA = 12742000 / 2
 
 distancia *= math.pow(10, 3)
 proporcao = (1 / (distancia + RAIO_DA_TERRA)) * 0.9
-escala_tela = (HEIGHT / 2) * proporcao 
+escala_tela = (HEIGHT / 2) * proporcao
 
 class Corpo_celeste:
 	G = 6.67428e-11
@@ -27,7 +27,7 @@ class Corpo_celeste:
 		self.raio = raio
 		self.cor = cor
 		self.massa = massa
-		
+
 		self.R = x + RAIO_DA_TERRA
 		self.g = 0
 		self.v = 0
@@ -60,7 +60,7 @@ class Corpo_celeste:
 	def velocidade(self):
 		R, g = self.R, self.g
 		v = math.sqrt(R * g)
-		T = 2 * self.PI  * R / v 
+		T = 2 * self.PI  * R / v
 		theta = 2 * self.PI / T
 		return theta, v
 
@@ -91,22 +91,31 @@ def main():
 	satelite = Corpo_celeste(distancia, 0, 4, WHITE, 0)
 	satelite.g = satelite.gravidade(terra)
 	satelite.theta, satelite.v = satelite.velocidade()
-	
+
 	t = 0
+	if satelite.v > 5000:
+		acrescimo = 60
+	elif satelite.v > 2000:
+		acrescimo = 600
+	else:
+		acrescimo = 3600
+
+	print(f"{satelite.theta} | {satelite.v}")
 	while run:
 		clock.tick(60)
 		WIN.fill((0, 0, 0))
-		t += 3600 				# t += 1 hora
+		t += acrescimo
 		for event in pygame.event.get():
 			if event.type == pygame.QUIT:
 				run = False
 
-		
+
 		tempo = t / (3600 * 24) 		# em dias
+		
 		print('Tempos %.1f em dias' %(tempo))
 		satelite.atualizar_posicao(t)
 		satelite.desenhar(WIN, escala_tela)
-		
+
 		terra.desenhar(WIN, escala_tela)
 
 		pygame.display.update()
