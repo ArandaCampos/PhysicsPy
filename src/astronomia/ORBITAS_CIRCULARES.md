@@ -1,7 +1,7 @@
 ## Orbitas Circulares (Satélites)
 
 &emsp;Na astronomia, os satélites são definidos como corpos que movimentam-se ao redor de um corpo celeste, normalmente mais pesado, como planeta, e não há colisão. Os satélites podem ser classificados como naturais ou artificiais: como a Lua e a Estação Internacional por exemplo.<br>
-&emsp;A única força sofrida pelo satélite em órbita é a gravidade. E para não cair na superfície celeste, precisa de uma velocidade precisa: nem pequena a ponto de sua trajetória colidir com o corpo e, nem superior a ponto de sair de órbita. Por isso, sabendo a distancia, podemos determinar com exatidão sua velocidade e consequentemente, sua trajetória. 
+&emsp;A única força sofrida pelo satélite em órbita é a gravidade. E para manter-se em orbita, precisa de uma velocidade precisa: nem pequena a ponto de sua trajetória colidir com o corpo orbitado e, nem superior a ponto de sair de órbita. Por isso, sabendo a distancia, podemos determinar com exatidão sua velocidade e consequentemente, sua trajetória. 
 
 ## Fórmulas importantes de Projéteis
 
