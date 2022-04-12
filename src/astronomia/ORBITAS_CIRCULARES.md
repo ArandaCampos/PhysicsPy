@@ -18,7 +18,7 @@
 
 ![orbitas_circulares](https://user-images.githubusercontent.com/87876734/162813250-68674b44-5e53-4a55-914e-8a1c14c1391c.gif)
 
-&emsp; Neste exemplo, foi simulado a orbita da Lua, nosso único satélite natural. Observe que apesar da Lua ser visível a olho nu, ela se encontra muito distante da terra, aproximadamente 384.400 km. Outra informação importante a ser extraida é o tempo que a Lua leva para completar uma volta em torno da Terra, que é de aproximadamento 27,3 dias.
+&emsp; Neste exemplo, foi simulado a orbita da Lua, nosso único satélite natural. Observe que apesar da Lua ser visível a olho nu, ela se encontra muito distante da terra, aproximadamente 384.400 km. Outra informação interessante é o tempo que a Lua leva para completar uma volta em torno da Terra, que é de aproximadamento 27,3 dias.
 
 ## Tecnologias empregadas
 * Python3
